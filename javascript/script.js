@@ -65,3 +65,26 @@ for (let j = 0; j < 5; j++) {
     dayText++;
   }
 }
+
+const showButton = document.getElementById('nmsg');
+const favDialog = document.getElementById('msgD');
+const confirmBtn = favDialog.querySelector('#confirmBtn');
+
+// "Show the dialog" button opens the <dialog> modally
+showButton.addEventListener('click', () => {
+    favDialog.showModal();
+});
+
+// "Favorite animal" input sets the value of the submit button
+selectEl.addEventListener('change', (e) => {
+  confirmBtn.value = selectEl.value;
+});
+
+// "Confirm" button triggers "close" on dialog because of [method="dialog"]
+favDialog.addEventListener('close', (e) => {
+  outputBox.value = favDialog.returnValue === 'default' ? "No return value." : `ReturnValue: ${favDialog.returnValue}.`; // Have to check for "default" rather than empty string
+});
+confirmBtn.addEventListener('click', (event) => {
+  event.preventDefault(); // We don't want to submit this fake form
+  favDialog.close(selectEl.value); // Have to send the select box value here.
+});

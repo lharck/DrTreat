@@ -108,6 +108,17 @@
     </div>
 
     <div class="screen" id="Msg" hidden>
+      <dialog id="msgD" style="height: 50%;">
+        <form>
+          <label for="freeform">Enter your message:</label><br>
+          <textarea id="freeform" name="freeform" rows="20" cols="50">
+          </textarea>
+          <div>
+            <button value="cancel" formmethod="dialog">Cancel</button>
+            <button id="confirmBtn" value="default">Submit</button>
+          </div>
+        </form>
+      </dialog>
       <div>
       </div>
       <div id="HLeft">
@@ -132,7 +143,7 @@
                   </b>
                   <p>Dr.Carl E. Jackson</p>
                 </div>
-                <b><button type="button" class="btnRound blueButton">Message</button></b>
+                <b><button id="nmsg" type="button" class="btnRound blueButton">Message</button></b>
               </div>
 
               <div class="rounded-box scrolling-item" style="padding: .5%;">
@@ -143,7 +154,7 @@
                   </b>
                   <p>Anita J. Henry</p>
                 </div>
-                <b><button type="button" class="btnRound blueButton">Message</button></b>
+                <b><button id="nmsg" type="button" class="btnRound blueButton">Message</button></b>
               </div>
 
               <div class="rounded-box scrolling-item" style="padding: .5%;">
@@ -154,7 +165,7 @@
                   </b>
                   <p>Daniel R. Fowler</p>
                 </div>
-                <b><button type="button" class="btnRound blueButton">Message</button></b>
+                <b><button id="nmsg" type="button" class="btnRound blueButton">Message</button></b>
               </div>
 
               <div class="rounded-box scrolling-item" style="padding: .5%;">
@@ -165,7 +176,7 @@
                   </b>
                   <p>Jacob P. Smith</p>
                 </div>
-                <b><button type="button" class="btnRound blueButton">Message</button></b>
+                <b><button id="nmsg" type="button" class="btnRound blueButton">Message</button></b>
               </div>
 
             </div>
@@ -192,7 +203,7 @@
                   </b>
                   <p>Dear ClientName,<br>I am pleased to inform you that your cat "Mitten's"<br>recent test results came back with...</p>
                 </div>
-                <b><button type="button" class="btnRound blueButton">Message</button></b>
+                <b><button id="nmsg" type="button" class="btnRound blueButton">Message</button></b>
               </div>
 
               <div class="rounded-box scrolling-item" style="padding: .5%;">
@@ -203,7 +214,7 @@
                   </b>
                   <p>Dear ClientName,<br>please come in soon to do bloodwork on Mittens.<br>We would like to make sure that she has...</p>
                 </div>
-                <b><button type="button" class="btnRound blueButton">Message</button></b>
+                <b><button id="nmsg" type="button" class="btnRound blueButton">Message</button></b>
               </div>
 
               <div class="rounded-box scrolling-item" style="padding: .5%;">
@@ -214,7 +225,7 @@
                   </b>
                   <p>Dear ClientName,<br>this is simply to let you know that Mittens<br>new prescriptions can now be seen under...</p>
                 </div>
-                <b><button type="button" class="btnRound blueButton">Message</button></b>
+                <b><button id="nmsg" type="button" class="btnRound blueButton">Message</button></b>
               </div>
             </div>
           </div>
