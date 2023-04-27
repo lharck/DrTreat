@@ -4,45 +4,45 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>replit</title>
+  <title>Dr. Treat</title>
   <link href="styling/style.css" rel="stylesheet" type="text/css" />
   <link href="styling/calendar.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=ABeeZee&display=swap">
 
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: 'Montserrat', sans-serif;
+      font-family: 'ABeeZee', sans-serif;
     }
   </style>
 </head>
 
 <body>
   <div id="topnav" style="display: flex; justify-content: center; align-items: center;">
-    <img data-screen="Home" class="logo" src="images/Logo.svg" alt="Logo" width="150" height="50"
+    <img data-screen="Home" class="logo" src="images/Logo.png" alt="Logo" width="200" height="40"
       style="margin-right: auto; margin-left: 1%;">
     <button data-screen="Home" type="button" class="menuButton btnRound">
-      <img src="images/logout.svg" alt="Logo" width="25px" height="25px">
+      <img src="images/home.png" alt="Logo" width="25px" height="25px">
       <div>Home</div>
     </button>
     <button data-screen="Apts" type="button" class="menuButton btnRound">
-      <img src="images/logout.svg" alt="Logo" width="25px" height="25px">
+      <img src="images/calendar.png" alt="Logo" width="25px" height="25px">
       <div>Appointments</div>
     </button>
     <button data-screen="Msg" type="button" class="menuButton btnRound">
-      <img src="images/logout.svg" alt="Logo" width="25px" height="25px">
+      <img src="images/messaging.png" alt="Logo" width="25px" height="25px">
       <div>Message Hub</div>
     </button>
     <button data-screen="Prsc" type="button" class="menuButton btnRound">
-      <img src="images/logout.svg" alt="Logo" width="25px" height="25px">
+      <img src="images/medicine.png" alt="Logo" width="25px" height="25px">
       <div>Prescription</div>
     </button>
     <button data-screen="Hst" type="button" class="menuButton btnRound">
-      <img src="images/logout.svg" alt="Logo" width="25px" height="25px">
+      <img src="images/file.png" alt="Logo" width="25px" height="25px">
       <div>Medical History</div>
     </button>
-    <button data-screen="Log" type="button" class="menuButton btnRound" style="margin-left: auto;">
-      <img src="images/logout.svg" alt="Logo" width="25px" height="25px">
-      <div>Logout</div>
+    <button  type="button" class=" btnRound" style="margin-left: auto;">
+      <img src="images/logout-svg.png" alt="Logo" width="25px" height="25px">
+      <a href="login.html" style="text-decoration: none; color: aliceblue;">Logout</a>
     </button>
   </div>
 
@@ -53,32 +53,39 @@
         <img src="images/Dog.jpg" alt="Logo" width="500" height="500">
       </div>
       <div id="HRight">
-        <div style="background-color: rgb(54, 54, 184); border-radius: 10px; padding: 2%;">
-          <h1 style="color: white; text-align: center;">Reminders</h1>
+        <div style="background-color: rgb(39, 80, 152); border-radius: 40px; padding: 2%; margin-left: -15%; height: 2%;">
+          <h1 style="color: white; text-align: center; margin-top: -8%">Reminders:</h1>
         </div>
 
-        <div style="background-color: rgb(210, 209, 209); padding: 5%; border-radius: 10px; margin-top: 2%; ">
-          <ul style="list-style-type: circle;">
-            <li>Annual checkup due on May 1</li>
-            <li>Heartworm medication due on April 15</li>
-            <li>Flea and tick medication due on May 1</li>
+        <div style="background-color: rgb(210, 209, 209); padding: 0%; border-radius: 10px; margin-top: 1%; width: 20vw; height: 12%">
+          <ul style="list-style-type: circle; margin-top: 4%;">
+            <b>
+              <li>Your next appointment for mittens is on the 22nd of March</li>
+              <li>Mittens is due for a checkup</li>
+            </b>
           </ul>
         </div>
 
       </div>
     </div>
     <div class="screen" id="Apts" hidden>
-      <h1>Schedule an appointment:</h1>
-      <h3>Select a day that you would like to have an appointment with your vet</h3>
+      <b><h1 style="margin-right: 12%; font-size: 2vw; width: 100%; margin-top: 10%;">Schedule an appointment:</h1></b>
+     <i> <h3>Select a day that you would like to have an appointment with your vet</h3></i>
 
       <div style="margin-left: -25%;">
+        <div style="
+        border-radius: 2%;
+        border-style: solid;
+        border-width: 7px;
+        border-color: gray;">
+
         <div class="rounded-box" style="
         background-color: rgb(214, 210, 210); 
         border-top: 60px solid rgb(174, 166, 166); 
         width: 40vw;
         height: 60vh;">
           <div class="header">
-            <h4 class="title" style="margin-top: -80px; margin-left: 2%;">Select Date:</h4>
+            <h4 class="title" style="margin-top: -80px; margin-left: 2%;font-weight: bold;font-size: 2vw;">Select Date:</h4>
           </div>
 
           <div class="rounded-box" style="height: 90%;">
@@ -104,7 +111,36 @@
             </div>
           </div>
         </div>
+        </div>
       </div>
+      
+      
+      <div style="margin-left: 40%; margin-top: -30%; background-color: rgb(226, 217, 217);
+      border-radius: 2%;
+      border-style: solid;
+      border-width: 5px;
+      border-color: gray;
+      width: 10%; height: 60%" 
+      class="rounded-box">
+      <h2>Select Time</h2>
+      <p>Booking times are in CST</p>
+      <form>
+          <input type="radio" id="10am" name="time" value="10am">
+          <label for="10am">10 am</label><br>
+          <input type="radio" id="11am" name="time" value="11am">
+          <label for="11am">11 am</label><br>
+          <input type="radio" id="12pm" name="time" value="12pm">
+          <label for="12pm">12 pm</label><br>
+          <input type="radio" id="1pm" name="time" value="1pm">
+          <label for="1pm">1 pm</label><br>
+          <input type="radio" id="2pm" name="time" value="2pm">
+          <label for="2pm">2 pm</label><br>
+          <input type="radio" id="3pm" name="time" value="3pm">
+          <label for="3pm">3 pm</label><br><br>
+          <input type="button" id="confirm-btn" class="rounded-box blueButton" value="Confirm Appointment" style="padding:2%; margin: 10%; width: 90%; height: 20%; color: white;">
+      </form>
+      </div>
+    </div>
     </div>
 
     <div class="screen" id="Msg" hidden>
@@ -135,7 +171,7 @@
             </div>
             <div class="scroll-frame" style="height: 90%;">
 
-              <div class="rounded-box scrolling-item" style="padding: .5%;">
+              <div class="rounded-box scrolling-item" style="padding: .5%; height: 20%;">
                 <div style="margin-left: 5%;">
                   <img src="images/vet.jpg" alt="Logo" width="50px" height="50px" style="float: left;">
                   <b>
@@ -146,7 +182,7 @@
                 <b><button id="nmsg" type="button" class="btnRound blueButton">Message</button></b>
               </div>
 
-              <div class="rounded-box scrolling-item" style="padding: .5%;">
+              <div class="rounded-box scrolling-item" style="padding: .5%; height: 20%;">
                 <div style="margin-left: 5%;">
                   <img src="images/rec.jpg" alt="Logo" width="50px" height="50px" style="float: left;">
                   <b>
@@ -157,7 +193,7 @@
                 <b><button id="nmsg" type="button" class="btnRound blueButton">Message</button></b>
               </div>
 
-              <div class="rounded-box scrolling-item" style="padding: .5%;">
+              <div class="rounded-box scrolling-item" style="padding: .5%; height: 20%;">
                 <div style="margin-left: 5%;">
                   <img src="images/Phys.jpg" alt="Logo" width="50px" height="50px" style="float: left;">
                   <b>
@@ -168,7 +204,7 @@
                 <b><button id="nmsg" type="button" class="btnRound blueButton">Message</button></b>
               </div>
 
-              <div class="rounded-box scrolling-item" style="padding: .5%;">
+              <div class="rounded-box scrolling-item" style="padding: .5%; height: 20%;">
                 <div style="margin-left: 5%;">
                   <img src="images/fin.jpg" alt="Logo" width="50px" height="50px" style="float: left;">
                   <b>
@@ -252,7 +288,7 @@
                 </b>
                 <p>Prescribed on: January 30th 2019</br>Reason: fleas.</p>
               </div>
-              <b><button type="button" class="btnRound blueButton">Request Refill</button></b>
+              <b><button type="button" class="btnRound blueButton" id="refillBtn">Request Refill</button></b>
             </div>
 
             <div class="rounded-box scrolling-item">
@@ -262,7 +298,7 @@
                 </b>
                 <p>Appointment date: April 30th 2020</br>Reason: Heart worm.</p>
               </div>
-              <b><button type="button" class="btnRound blueButton">Request Refill</button></b>
+              <b><button type="button" class="btnRound blueButton" id="refillBtn">Request Refill</button></b>
             </div>
 
 
@@ -273,7 +309,7 @@
                 </b>
                 <p>Appointment date: March 30th 2020</br>Note: Joint pain.</p>
               </div>
-              <b><button type="button" class="btnRound blueButton">Request Refill</button></b>
+              <b><button type="button" class="btnRound blueButton" id="refillBtn">Request Refill</button></b>
             </div>
 
 
@@ -284,7 +320,7 @@
                 </b>
                 <p>Appointment date: January 30th 2022</br>Note: Yearly bottle.</p>
               </div>
-              <b><button type="button" class="btnRound blueButton">Request Refill</button></b>
+              <b><button type="button" class="btnRound blueButton" id="refillBtn">Request Refill</button></b>
             </div>
           </div>
         </div>

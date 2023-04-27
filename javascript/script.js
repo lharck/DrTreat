@@ -23,33 +23,46 @@ navAnchors.forEach((anchor) => {
 });
 
 
-
+// aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 
 const box = document.querySelector('#calendar-day-box');
 
-function createDay(){
+function createDay() {
   const day = document.createElement('div');
-  day.className = 'rounded-box';
+  day.className = 'rounded-box day-cal';
   day.style.backgroundColor = 'white';
   day.style.width = '12%';
   day.style.height = '100%';
   const dayText = document.createElement('p');
-  dayText.id = 'dayText';
+  dayText.className = 'day-text';
+  dayText.textContent = '1';
   dayText.style.marginRight = '10px';
   dayText.style.marginTop = '-5px';
-  dayText.style.fontSize = 1 + 'vw';
+  dayText.style.fontSize = '1vw';
   day.appendChild(dayText);
+
+  day.addEventListener('click', function() {
+    // Set all days to white
+    const days = document.querySelectorAll('.day-cal');
+    days.forEach(function(day) {
+      day.style.backgroundColor = 'white';
+    });
+    
+    // Set clicked day to blue
+    day.style.backgroundColor = 'lightblue';
+  });
 
   return day;
 }
-function createRow(){
+
+function createRow() {
   const row = document.createElement('div');
   row.className = 'row';
   row.style.display = 'flex';
   row.style.flexDirection = 'row';
   row.style.justifyContent = 'space-evenly';
-  
-  return row; 
+
+  return row;
 }
 
 for (let j = 0; j < 5; j++) {  
@@ -60,31 +73,86 @@ for (let j = 0; j < 5; j++) {
 
   for (let i = 0; i < 7; i++) {
     const newDay = createDay();
-    newDay.querySelector('#dayText').textContent = dayText;
+    newDay.querySelector('.day-text').textContent = dayText;
     row.appendChild(newDay);
     dayText++;
   }
 }
 
-const showButton = document.getElementById('nmsg');
-const favDialog = document.getElementById('msgD');
-const confirmBtn = favDialog.querySelector('#confirmBtn');
 
-// "Show the dialog" button opens the <dialog> modally
-showButton.addEventListener('click', () => {
-    favDialog.showModal();
+
+const days = document.querySelectorAll('.rounded-box.day-cal');
+
+days.forEach(function(day) {
+  day.addEventListener('click', function() {
+    // Set previously selected day's background color to normal
+    const previouslySelected = document.querySelector('.selected');
+    if (previouslySelected) {
+      previouslySelected.classList.remove('selected');
+    }
+
+    // Set clicked day's background color to blue
+    day.classList.add('selected');
+  });
 });
 
-// "Favorite animal" input sets the value of the submit button
-selectEl.addEventListener('change', (e) => {
-  confirmBtn.value = selectEl.value;
+const confirmBtnn = document.querySelector('#confirm-btn');
+
+confirmBtnn.addEventListener('click', function() {
+  const confirmed = confirm('Book an appointment?');
+  if (confirmed) {
+    alert('Your appointment was confirmed.');
+  }
 });
 
-// "Confirm" button triggers "close" on dialog because of [method="dialog"]
-favDialog.addEventListener('close', (e) => {
-  outputBox.value = favDialog.returnValue === 'default' ? "No return value." : `ReturnValue: ${favDialog.returnValue}.`; // Have to check for "default" rather than empty string
+
+const refillBtns = document.querySelectorAll('#refillBtn');
+
+refillBtns.forEach(function(refillBtn) {
+  refillBtn.addEventListener('click', function() {
+    if (refillBtn.textContent === 'Refill In Progress') {
+      alert('Your refill request is already in progress.');
+    } else {
+      const confirmed = confirm('Are you sure you want to request a refill?');
+      if (confirmed) {
+        refillBtn.textContent = 'Refill In Progress';
+        alert('Your refill request has been confirmed.');
+      }
+    }
+  });
 });
-confirmBtn.addEventListener('click', (event) => {
-  event.preventDefault(); // We don't want to submit this fake form
-  favDialog.close(selectEl.value); // Have to send the select box value here.
+
+//ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
+
+
+// const showButton = document.getElementById('nmsg');
+// const favDialog = document.getElementById('msgD');
+// const confirmBtn = favDialog.querySelector('#confirmBtn');
+
+
+// showButton.addEventListener('click', () => {
+//     favDialog.showModal();
+// });
+
+// selectEl.addEventListener('change', (e) => {
+//   confirmBtn.value = selectEl.value;
+// });
+
+// favDialog.addEventListener('close', (e) => {
+//   outputBox.value = favDialog.returnValue === 'default' ? "No return value." : `ReturnValue: ${favDialog.returnValue}.`; // Have to check for "default" rather than empty string
+// });
+
+// confirmBtn.addEventListener('click', (event) => {
+//   event.preventDefault(); 
+//   favDialog.close(selectEl.value); 
+// });
+
+const messageButtons = document.querySelectorAll('#nmsg');
+
+messageButtons.forEach(function(messageButton) {
+  const dialog = document.getElementById('msgD');
+
+  messageButton.addEventListener('click', function() {
+    dialog.showModal();
+  });
 });
