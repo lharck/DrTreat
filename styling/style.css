@@ -16,6 +16,7 @@ html {
   float:left;
   height: 40vh;
 }
+
 #HRight{
   display: flex; justify-content: center; align-items: center;
   flex-direction: column;
@@ -139,3 +140,32 @@ html {
 
 
 
+.row {
+  padding: 5px;
+}
+
+.weekdays {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.weekday {
+  font-weight: bold;
+}
+
+.month {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  /* padding: 2%; */
+  /* height: 0%; */
+  border-radius: 90px;
+  margin: 1%;
+  background-color: #7e7e7e;
+  margin-left: 10%;
+  color: white;
+  font-size: .8vw;
+  
+  font-weight: bold;
+}

@@ -21,3 +21,47 @@ navAnchors.forEach((anchor) => {
     targetScreen.removeAttribute("hidden");
   })
 });
+
+
+
+
+const box = document.querySelector('#calendar-day-box');
+
+function createDay(){
+  const day = document.createElement('div');
+  day.className = 'rounded-box';
+  day.style.backgroundColor = 'white';
+  day.style.width = '12%';
+  day.style.height = '100%';
+  const dayText = document.createElement('p');
+  dayText.id = 'dayText';
+  dayText.style.marginRight = '10px';
+  dayText.style.marginTop = '-5px';
+  dayText.style.fontSize = 1 + 'vw';
+  day.appendChild(dayText);
+
+  return day;
+}
+function createRow(){
+  const row = document.createElement('div');
+  row.className = 'row';
+  row.style.display = 'flex';
+  row.style.flexDirection = 'row';
+  row.style.justifyContent = 'space-evenly';
+  
+  return row; 
+}
+
+for (let j = 0; j < 5; j++) {  
+  const row = createRow();
+
+  box.appendChild(row);
+  let dayText = j * 7 + 1;
+
+  for (let i = 0; i < 7; i++) {
+    const newDay = createDay();
+    newDay.querySelector('#dayText').textContent = dayText;
+    row.appendChild(newDay);
+    dayText++;
+  }
+}
