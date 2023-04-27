@@ -1,6 +1,6 @@
 document.querySelector("#Home").removeAttribute("hidden");
 
-const navAnchors = document.querySelectorAll('button#menuButton');
+const navAnchors = document.querySelectorAll('button.menuButton');
 
 navAnchors.forEach((anchor) => {
 

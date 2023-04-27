@@ -18,44 +18,45 @@
 
 <body>
   <div id="topnav" style="display: flex; justify-content: center; align-items: center;">
-    <img data-screen="Home" class="logo" src="images/Logo.svg" alt="Logo" width="150" height="50" style="margin-right: auto; margin-left: 1%;">
-    <button data-screen="Home" type="button" id="menuButton">
+    <img data-screen="Home" class="logo" src="images/Logo.svg" alt="Logo" width="150" height="50"
+      style="margin-right: auto; margin-left: 1%;">
+    <button data-screen="Home" type="button" class="menuButton btnRound">
       <img src="images/logout.svg" alt="Logo" width="25px" height="25px">
       <div>Home</div>
     </button>
-    <button data-screen="Apts" type="button" id="menuButton">
+    <button data-screen="Apts" type="button" class="menuButton btnRound">
       <img src="images/logout.svg" alt="Logo" width="25px" height="25px">
       <div>Appointments</div>
     </button>
-    <button data-screen="Msg" type="button" id="menuButton">
+    <button data-screen="Msg" type="button" class="menuButton btnRound">
       <img src="images/logout.svg" alt="Logo" width="25px" height="25px">
       <div>Message Hub</div>
     </button>
-    <button data-screen="Prsc" type="button" id="menuButton">
+    <button data-screen="Prsc" type="button" class="menuButton btnRound">
       <img src="images/logout.svg" alt="Logo" width="25px" height="25px">
       <div>Prescription</div>
     </button>
-    <button data-screen= "Hst" type="button" id="menuButton" style="margin-left: auto;">
+    <button data-screen="Hst" type="button" class="menuButton btnRound">
+      <img src="images/logout.svg" alt="Logo" width="25px" height="25px">
+      <div>Medical History</div>
+    </button>
+    <button data-screen="Hst" type="button" class="menuButton btnRound" style="margin-left: auto;">
       <img src="images/logout.svg" alt="Logo" width="25px" height="25px">
       <div>Logout</div>
     </button>
   </div>
-  
 
-  
-
-  
   <div id="content">
     <div class="screen" id="Home" hidden>
       <div id="HLeft">
-        <h1 class="welcomeLogo">Welcome To Dr.Treat</h1> 
+        <h1 class="welcomeLogo">Welcome To Dr.Treat</h1>
         <img src="images/Dog.jpg" alt="Logo" width="500" height="500">
       </div>
       <div id="HRight">
         <div style="background-color: rgb(54, 54, 184); border-radius: 10px; padding: 2%;">
           <h1 style="color: white; text-align: center;">Reminders</h1>
         </div>
-        
+
         <div style="background-color: rgb(210, 209, 209); padding: 5%; border-radius: 10px; margin-top: 2%; ">
           <ul style="list-style-type: circle;">
             <li>Annual checkup due on May 1</li>
@@ -70,85 +71,286 @@
       <h1>Schedule an appointment:</h1>
       <h3>Select a day that you would like to have an appointment with your vet</h3>
       <div class="calendar">
-    
-        <div class="month">      
-            <ul>
-              <li class="prev">&#10094;</li>
-              <li class="next">&#10095;</li>
-              <li>
-                August<br>
-                <span style="font-size:18px">2023</span>
-              </li>
-            </ul>
-          </div>
-      
-          <ul class="weekdays">
-            <li>Mo</li>
-            <li>Tu</li>
-            <li>We</li>
-            <li>Th</li>
-            <li>Fr</li>
-            <li>Sa</li>
-            <li>Su</li>
+
+        <div class="month">
+          <ul>
+            <li class="prev">&#10094;</li>
+            <li class="next">&#10095;</li>
+            <li>
+              August<br>
+              <span style="font-size:18px">2023</span>
+            </li>
           </ul>
-      
-          <ul class="days">  
-            <li>1</li>
-            <li>2</li>
-            <li>3</li>
-            <li>4</li>
-            <li>5</li>
-            <li>6</li>
-            <li>7</li>
-            <li>8</li>
-            <li>9</li>
-            <li><span class="active">10</span></li>
-            <li>11</li>
-            <li>12</li>
-            <li>13</li>
-            <li>14</li>
-            <li>15</li>
-            <li>16</li>
-            <li>17</li>
-            <li>18</li>
-            <li>19</li>
-            <li>20</li>
-            <li>21</li>
-            <li>22</li>
-            <li>23</li>
-            <li>24</li>
-            <li>25</li>
-            <li>26</li>
-            <li>27</li>
-            <li>28</li>
-            <li>29</li>
-            <li>30</li>
-            <li>31</li>
-          </ul>
+        </div>
+
+        <ul class="weekdays">
+          <li>Mo</li>
+          <li>Tu</li>
+          <li>We</li>
+          <li>Th</li>
+          <li>Fr</li>
+          <li>Sa</li>
+          <li>Su</li>
+        </ul>
+
+        <ul class="days">
+          <li>1</li>
+          <li>2</li>
+          <li>3</li>
+          <li>4</li>
+          <li>5</li>
+          <li>6</li>
+          <li>7</li>
+          <li>8</li>
+          <li>9</li>
+          <li><span class="active">10</span></li>
+          <li>11</li>
+          <li>12</li>
+          <li>13</li>
+          <li>14</li>
+          <li>15</li>
+          <li>16</li>
+          <li>17</li>
+          <li>18</li>
+          <li>19</li>
+          <li>20</li>
+          <li>21</li>
+          <li>22</li>
+          <li>23</li>
+          <li>24</li>
+          <li>25</li>
+          <li>26</li>
+          <li>27</li>
+          <li>28</li>
+          <li>29</li>
+          <li>30</li>
+          <li>31</li>
+        </ul>
       </div>
     </div>
     <div class="screen" id="Msg" hidden>
       <div>
-      <h1>Message Hub</h1>
-      <h3>Talk to the staff at your local Vet Clinic</h3>
       </div>
       <div id="HLeft">
-        <h2>Contacts:</h2>
+        <div style="margin-left: 0%; margin-top: 40%;">
+          <h1>Message Hub</h1>
+          <h3>Talk to the staff at your local Vet Clinic</h3>
+          <div class="rounded-box" style="
+          background-color: rgb(214, 210, 210); 
+          border-top: 60px solid rgb(174, 166, 166); 
+          width: 32vw;
+          height: 60vh;">
+            <div class="header">
+              <h4 class="title" style="margin-top: -80px; margin-left: 2%;">Contacts</h4>
+            </div>
+            <div class="scroll-frame" style="height: 90%;">
+  
+              <div class="rounded-box scrolling-item" style="padding: .5%;">
+                <div style="margin-left: 5%;">
+                  <b>
+                    <p style="font-size: 20px;">Flea Shot</p> 
+                  </b>
+                  <p>Appointment date: January 30th 2022</br>Note: Administered yearly preventive flu shot</p>
+                </div>
+              </div>
+  
+              <div class="rounded-box scrolling-item" style="padding: .5%;">
+                <div style="margin-left: 5%;">
+                  <b>
+                    <p style="font-size: 20px;">Blood work</p> 
+                  </b>
+                  <p>Appointment date: March 10th 2021</br>Note: Did blood work for testing.</p>
+                </div>
+              </div>
+  
+              <div class="rounded-box scrolling-item" style="padding: .5%;">
+                <div style="margin-left: 5%;">
+                  <b>
+                    <p style="font-size: 20px;">Stool sample</p> 
+                  </b>
+                  <p>Appointment date: August 30th 2020</br>Note: Administered stool stample to check for diseases</p>
+                </div>
+              </div>
+  
+              <div class="rounded-box scrolling-item" style="padding: .5%;">
+                <div style="margin-left: 5%;">
+                  <b>
+                    <p style="font-size: 20px;">Flea Medication</p> 
+                  </b>
+                  <p>Appointment date: Dec 2nd 2015</br>Note: Administered stool stample to check for diseases</p>
+                </div>
+              </div>
+  
+            </div>
+          </div>
+        </div>
       </div>
       <div id="HRight">
-        <h2>Messages:</h2>
+        <div style="margin-left: -40%;">
+          <div class="rounded-box" style="
+          background-color: rgb(214, 210, 210); 
+          border-top: 60px solid rgb(174, 166, 166); 
+          width: 40vw;
+          height: 60vh;">
+            <div class="header">
+              <h4 class="title" style="margin-top: -80px; margin-left: 2%;">Messages</h4>
+            </div>
+            <div class="scroll-frame" style="height: 90%;">
+  
+              <div class="rounded-box scrolling-item" style="padding: .5%;">
+                <div style="margin-left: 5%;">
+                  <b>
+                    <p style="font-size: 20px;">Flea Shot</p> 
+                  </b>
+                  <p>Appointment date: January 30th 2022</br>Note: Administered yearly preventive flu shot</p>
+                </div>
+              </div>
+  
+              <div class="rounded-box scrolling-item" style="padding: .5%;">
+                <div style="margin-left: 5%;">
+                  <b>
+                    <p style="font-size: 20px;">Blood work</p> 
+                  </b>
+                  <p>Appointment date: March 10th 2021</br>Note: Did blood work for testing.</p>
+                </div>
+              </div>
+  
+              <div class="rounded-box scrolling-item" style="padding: .5%;">
+                <div style="margin-left: 5%;">
+                  <b>
+                    <p style="font-size: 20px;">Stool sample</p> 
+                  </b>
+                  <p>Appointment date: August 30th 2020</br>Note: Administered stool stample to check for diseases</p>
+                </div>
+              </div>
+  
+              <div class="rounded-box scrolling-item" style="padding: .5%;">
+                <div style="margin-left: 5%;">
+                  <b>
+                    <p style="font-size: 20px;">Flea Medication</p> 
+                  </b>
+                  <p>Appointment date: Dec 2nd 2015</br>Note: Administered stool stample to check for diseases</p>
+                </div>
+              </div>
+  
+            </div>
+          </div>
+        </div>        
       </div>
-      
     </div>
     <div class="screen" id="Prsc" hidden>
-      <h1>Prescriptions</h1>
-      <h4>View your pets medications and request a refill</h4>
+      <div style="margin-left: 25%; margin-top: 5%;">
+        <h1>Prescriptions</h1>
+        <h4>View your pets medications and request a refill</h4>
+        <div class="rounded-box" style="
+        background-color: rgb(214, 210, 210); 
+        border-top: 60px solid rgb(174, 166, 166); 
+        max-width: 40vw;
+        height: 60vh;">
+          <div class="header">
+            <h4 class="title" style="margin-top: -80px; margin-left: 2%;">Mitten's Prescriptions</h4>
+          </div>
+          <div class="scroll-frame" style="height: 90%;">
+            <div class="rounded-box scrolling-item">
+              <div style="margin-left: 5%;">
+                <b>
+                  <p style="margin-top: -10px; font-size: 20px;">Flea Medication</p>
+                </b>
+                <p>Prescribed on: January 30th 2019</br>Reason: fleas.</p>
+              </div>
+              <b><button type="button" class="btnRound blueButton">Request Refill</button></b>
+            </div>
+
+            <div class="rounded-box scrolling-item">
+              <div style="margin-left: 5%;">
+                <b>
+                  <p style="margin-top: -10px; font-size: 20px;">Heart Worm Medication</p>
+                </b>
+                <p>Appointment date: April 30th 2020</br>Reason: Heart worm.</p>
+              </div>
+              <b><button type="button" class="btnRound blueButton">Request Refill</button></b>
+            </div>
+
+
+            <div class="rounded-box scrolling-item">
+              <div style="margin-left: 5%;">
+                <b>
+                  <p style="margin-top: -10px; font-size: 20px;">Pain medication</p>
+                </b>
+                <p>Appointment date: March 30th 2020</br>Note: Joint pain.</p>
+              </div>
+              <b><button type="button" class="btnRound blueButton">Request Refill</button></b>
+            </div>
+
+
+            <div class="rounded-box scrolling-item">
+              <div style="margin-left: 5%;">
+                <b>
+                  <p style="margin-top: -10px; font-size: 20px;">Flea Medication</p>
+                </b>
+                <p>Appointment date: January 30th 2022</br>Note: Yearly bottle.</p>
+              </div>
+              <b><button type="button" class="btnRound blueButton">Request Refill</button></b>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <div class="screen" id="Hst" hidden>
-      <h1>Medical History</h1>
-      <h4>View your pets medical history from their recent visits</h4>
+      <div style="margin-left: 25%; margin-top: 5%;">
+        <h1>Medical History</h1>
+        <h4>View your pets medical history from their recent visits</h4>
+        <div class="rounded-box" style="
+        background-color: rgb(214, 210, 210); 
+        border-top: 60px solid rgb(174, 166, 166); 
+        max-width: 40vw;
+        height: 60vh;">
+          <div class="header">
+            <h4 class="title" style="margin-top: -80px; margin-left: 2%;">Mitten's Medical History</h4>
+          </div>
+          <div class="scroll-frame" style="height: 90%;">
+
+            <div class="rounded-box scrolling-item" style="padding: .5%;">
+              <div style="margin-left: 5%;">
+                <b>
+                  <p style="font-size: 20px;">Flea Shot</p> 
+                </b>
+                <p>Appointment date: January 30th 2022</br>Note: Administered yearly preventive flu shot</p>
+              </div>
+            </div>
+
+            <div class="rounded-box scrolling-item" style="padding: .5%;">
+              <div style="margin-left: 5%;">
+                <b>
+                  <p style="font-size: 20px;">Blood work</p> 
+                </b>
+                <p>Appointment date: March 10th 2021</br>Note: Did blood work for testing.</p>
+              </div>
+            </div>
+
+            <div class="rounded-box scrolling-item" style="padding: .5%;">
+              <div style="margin-left: 5%;">
+                <b>
+                  <p style="font-size: 20px;">Stool sample</p> 
+                </b>
+                <p>Appointment date: August 30th 2020</br>Note: Administered stool stample to check for diseases</p>
+              </div>
+            </div>
+
+            <div class="rounded-box scrolling-item" style="padding: .5%;">
+              <div style="margin-left: 5%;">
+                <b>
+                  <p style="font-size: 20px;">Flea Medication</p> 
+                </b>
+                <p>Appointment date: Dec 2nd 2015</br>Note: Administered stool stample to check for diseases</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
     </div>
-  </div> 
+  </div>
 
   <script src="javascript/script.js"></script>
 

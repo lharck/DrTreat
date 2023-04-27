@@ -1,7 +1,7 @@
 html {
   height: 100%;
   width: 100%;
-  background-color: beige;
+  background-color: rgb(245, 241, 234);
 }
 
 .active {
@@ -32,10 +32,10 @@ html {
   text-align: center;
   border-radius: 15px;
   line-height: 1.5;
-  font-size: 2rem;
+  font-size: 2vw;
 }
 
-#menuButton{
+.btnRound{
   display: flex; justify-content: space-evenly; align-items: center;
   background-color: rgba(0, 0, 0, 0.119);
   border-radius: 10px;
@@ -48,11 +48,11 @@ html {
   box-shadow: 4px 4px rgba(0, 0, 0, 0.194);
   display: flex; justify-self: flex-end;
   color: white;
-  font-size: 10px;
+  font-size: .7vw;
 }
 
-#menuButton:hover{
-  background-color: rgba(184, 184, 184, 0.119);
+.btnRound:hover{
+  background-color: rgba(212, 212, 212, 0.121);
 }
 
 #content { 
@@ -66,7 +66,7 @@ html {
   left: 0;
   width: 100%;
   height: 50px;  
-  background-color: maroon;
+  background-color: rgb(147, 0, 0);
   text-align: center;
 }
 
@@ -83,4 +83,59 @@ html {
   display: flex; justify-content: center; align-items: center;
   flex-direction: column;
 }
+
+
+.rounded-box {
+  padding-top: 10px;
+  border-radius: 10px;
+}
+
+.scrolling-item{
+  background-color: rgb(214, 210, 210); 
+  border-bottom: 10px solid rgb(120, 114, 114);
+  padding-top: 5%;
+  padding-bottom: 6%;
+  margin: 2%;
+}
+.scroll-frame {
+  height: 150px;
+  overflow-y: scroll;
+  border-radius: 10px;
+  background-color: rgb(255, 255, 255);
+  padding: 5px;  
+  border-radius: 10px;
+  background-color: rgb(255, 255, 255);
+  padding: 10px;
+  width: 95%;
+  margin-left: 2%;
+  margin-top: 2%;
+}
+
+.blueButton{
+  width: 20%; 
+  height: 3vh; 
+  font-size: .9vw;
+  margin-left: 75%;
+  margin-top: -10%;
+  background-color: rgb(40, 93, 164);
+}
+
+.blueButton:hover{
+  background-color: rgb(21, 52, 93);;
+}
+
+
+.header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.title {
+  font-size: 1.5vw;
+  font-weight: bold;
+  margin: 0;
+}
+
+
 
