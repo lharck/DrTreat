@@ -1,0 +1,202 @@
+nav {
+    display: flex;
+    margin-bottom: 20px;
+    justify-content: left;
+    font-family: Arial, sans-serif;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 100px;
+}
+
+nav ul {
+    display: contents;
+    list-style-type: none;
+}
+
+nav a {
+    text-decoration: none;
+    display: block;
+    color: black;
+    padding: 15px 15px;
+}
+
+body {
+    background-color: maroon;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+.section1,
+.section2 {
+    width: 100%;
+    padding: 30px;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 15px; /* Add curved edges */
+    margin: 0 10px; /* Add some margin between the sections */
+}
+
+.section1 {
+    background-color: white;
+    padding: 1em;
+    font-size: 10px;
+    width: auto;
+    max-width: 50%;
+    height: fit-content;
+    float: left;
+
+}
+
+.section2 {
+    width: auto;
+    height: fit-content;
+    padding-top: 77px;
+    padding-bottom: 77px;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.section2 div {
+    margin-top: auto;
+    padding: 40px;
+    padding-left: 20px;
+    padding-right: 80px;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+}
+
+
+.login_image {
+    background-color: none;
+    padding: 5px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.login_image img {
+    position: relative;
+    bottom: 10px;
+    float: right;
+    height: 350px;
+    width: 200px;
+}
+
+.forgotpassword {
+    font-size: 10px;
+}
+
+.container input[type="text"], input[type="password"]{
+    align-self: self-start;
+    width:100%;
+    max-width: auto;
+    box-sizing: border-box;
+}
+
+.container2 {
+    width: 80%;
+    max-width: 400px;
+    margin: 50px auto;
+    display: flex;
+    flex-wrap: wrap;
+    height: fit-content;
+    padding: 20px;
+    align-items: middle;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(17, 11, 11, 0.1);
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.container2 h1 {
+    font-size: 1.5rem;
+    color: maroon;
+    margin-bottom: 40px;
+}
+
+.container2 h2 {
+    font-size: 0.8rem;
+    margin-bottom: 20px;
+    margin-top: -20px;
+}
+
+.container2 form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    max-width: 400px;
+}
+
+.container2 label {
+    align-self: flex-start;
+    font-size: 1rem;
+    margin-bottom: 4px;
+}
+
+.container2 input[type="button"] {
+    cursor: pointer;
+    background-color: #86a886;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    transition-duration: 0.4s; /* a transition effect */
+}
+
+.container2 input[type="button"]:hover {
+    background-color: #2e8b57;
+    color: white;
+}
+
+
+.container2 input[type="email"] {
+    align-self: self-start;
+    width:100%;
+    max-width: auto;
+    box-sizing: border-box;
+}
+
+.back-to-signin {
+    display: inline-block;
+    margin-top: 10px;
+    color: black; /* Change this to your preferred link color */
+    text-decoration: none;
+    font-size: 0.7rem;
+    font-weight: bold;
+}
+
+
+.container2 h3 {
+    font-size: 1.5rem;
+    color: maroon;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.container2 p1{
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.container2 p2{
+    font-size: 0.7rem;
+    font-weight: normal;
+}
